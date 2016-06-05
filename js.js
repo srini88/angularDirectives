@@ -1,7 +1,7 @@
 angular.module('app', []);
 
 angular.module('app').controller('mainCtrl', function($scope){
-	$scope.user = {
+	$scope.user1 = {
 		name :'Srinivas',
 		job :"front  end developer",
 		friends :[
@@ -24,10 +24,16 @@ angular.module('app').directive('userInfoCard', function(){
 		templateUrl :"userInfo.html",
 		restrict:"E",
 		//making user object visibile to the directive.s
-
+		scope:{
+			user : '='
+		},
 		controller :function($scope){
+			$scope.collapsed = false;
 			$scope.knightMe = function(user){
 				user.rank = "jesus";
+			}
+			$scope.collapse = function(){
+				$scope.collapsed = !$scope.collapsed;
 			}
 			//console.log($scope)
 		}
