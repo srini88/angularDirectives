@@ -1,7 +1,7 @@
 angular.module('app', []);
 
 angular.module('app').controller('mainCtrl', function($scope){
-	$scope.user = {
+	$scope.user1 = {
 		name :'Srinivas',
 		job :"front  end developer",
 		friends :[
@@ -56,3 +56,6 @@ angular.module('app').directive('userInfoCard', function(){
 ///Directive with isolated scope..  (no link between mainCtrl and the controller in our directive)
 
 ////to make it available --- you got to bind the data .....on an object by object basis..
+
+
+//what does this isolated scope solve....
