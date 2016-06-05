@@ -16,7 +16,10 @@ angular.module('app').directive('userInfoCard', function(){
 	return {   
 		templateUrl :"userInfo.html",
 		restrict:"E",
-		scope:{},
+		//making user object visibile to the directive.s
+		scope:{
+			user : '='
+		},
 		controller :function($scope){
 			$scope.knightMe = function(user){
 				user.rank = "jesus";
