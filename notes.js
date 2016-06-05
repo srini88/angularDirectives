@@ -49,3 +49,4 @@ in production env --  better to use directives in a separate JS file..
 or prefix with the company name... 
 
 dont use directives like section and all --- it messes up with HTML5 section element...so always prefix..
+
