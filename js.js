@@ -9,7 +9,14 @@ angular.module('app').controller('mainCtrl', function($scope){
 		'palghat'
 		]
 	}
-	console.log($scope)
+	$scope.user2 = {
+		name :'PVS',
+		job :"PHP developer",
+		friends :[
+		'viswanath',
+		'palghat'
+		]
+	}
 });
 
 angular.module('app').directive('userInfoCard', function(){
@@ -30,32 +37,10 @@ angular.module('app').directive('userInfoCard', function(){
 })
 
 
-
-// knight button is in directive but the method is in the controller..we are violating encapsulation..
-
-// so give directive its own controller..
-
-///now knight me is served from the directive itself...
-
-// above scope in the mainCtrl and in the controler inside userInfoCard is same..
-
-
-//before inherited scope -- - i expanded the console. log from both $scopes ...both have same id...
-
-
-// create a directive with inherited scope...
-
-///after createing shared scope , with scoep:true/// the ids' are diffferent in console.logs
-
-//child scope has a parent property........which is themainCtrl..
-///still the child scope in directive can access the parent scope user...(that's not the point)
-//by setting scope true -- we can add new shit to child - that cannot be seen by the parent..
-
-
-
-///Directive with isolated scope..  (no link between mainCtrl and the controller in our directive)
-
-////to make it available --- you got to bind the data .....on an object by object basis..
-
-
 //what does this isolated scope solve....
+
+////having multiple users --- and bind that user object to directive from the html....
+//added two users...
+/////this directive is truly reususable...remember  scope :{ 
+//set it to obj
+//}
