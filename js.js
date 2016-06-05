@@ -16,7 +16,7 @@ angular.module('app').directive('userInfoCard', function(){
 	return {   
 		templateUrl :"userInfo.html",
 		restrict:"E",
-		scope:true,
+		scope:{},
 		controller :function($scope){
 			$scope.knightMe = function(user){
 				user.rank = "jesus";
@@ -50,4 +50,6 @@ angular.module('app').directive('userInfoCard', function(){
 
 
 
-///Directive with isolated scope..
+///Directive with isolated scope..  (no link between mainCtrl and the controller in our directive)
+
+////to make it available --- you got to bind the data .....on an object by object basis..
