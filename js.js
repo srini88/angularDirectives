@@ -9,19 +9,27 @@ angular.module('app').controller('mainCtrl', function($scope){
 		'palghat'
 		]
 	}
-	$scope.knightMe = function(user){
-		console.log("clicked");
-		console.log(user)  //Object {name: "Srinivas", job: "front  end developer", friends: Array[2]}
-		user.rank = "jesus";
-
-	}
-
 });
 
 angular.module('app').directive('userInfoCard', function(){
 	return {   
 		templateUrl :"userInfo.html",
-		restrict:"E"
+		restrict:"E",
+		controller :function($scope){
+			$scope.knightMe = function(user){
+				console.log("clicked");
+				console.log(user)  //Object {name: "Srinivas", job: "front  end developer", friends: Array[2]}
+				user.rank = "jesus";
+
+			}
+		}
 	}
 })
 
+
+
+// knight button is in directive but the method is in the controller..we are violating encapsulation..
+
+// so give directive its own controller..
+
+///now knight me is served from the directive itself...
