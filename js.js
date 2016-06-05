@@ -1,7 +1,7 @@
 angular.module('app', []);
 
 angular.module('app').controller('mainCtrl', function($scope){
-	$scope.user1 = {
+	$scope.user = {
 		name :'Srinivas',
 		job :"front  end developer",
 		friends :[
@@ -24,14 +24,12 @@ angular.module('app').directive('userInfoCard', function(){
 		templateUrl :"userInfo.html",
 		restrict:"E",
 		//making user object visibile to the directive.s
-		scope:{
-			user : '='
-		},
+
 		controller :function($scope){
 			$scope.knightMe = function(user){
 				user.rank = "jesus";
 			}
-			console.log($scope)
+			//console.log($scope)
 		}
 	}
 })
@@ -44,3 +42,8 @@ angular.module('app').directive('userInfoCard', function(){
 /////this directive is truly reususable...remember  scope :{ 
 //set it to obj
 //}
+
+
+//dont use multiple directives --- will mess up scope...
+
+//now want to collapge entire user info card..on a click
