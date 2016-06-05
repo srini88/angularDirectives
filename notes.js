@@ -50,3 +50,9 @@ or prefix with the company name...
 
 dont use directives like section and all --- it messes up with HTML5 section element...so always prefix..
 
+
+//now if you klook at html we just have one directive tag -- but whole lot of data is being pulled from JS and external html -- that is the beauty of directives..
+
+
+
+our directive can access user.....wich is in the parent controller

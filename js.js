@@ -9,6 +9,7 @@ angular.module('app').controller('mainCtrl', function($scope){
 		'palghat'
 		]
 	}
+	console.log($scope);
 });
 
 angular.module('app').directive('userInfoCard', function(){
@@ -20,8 +21,8 @@ angular.module('app').directive('userInfoCard', function(){
 				console.log("clicked");
 				console.log(user)  //Object {name: "Srinivas", job: "front  end developer", friends: Array[2]}
 				user.rank = "jesus";
-
 			}
+			console.log($scope);
 		}
 	}
 })
@@ -33,3 +34,5 @@ angular.module('app').directive('userInfoCard', function(){
 // so give directive its own controller..
 
 ///now knight me is served from the directive itself...
+
+// above scope in the mainCtrl and in the controler inside userInfoCard is same..
