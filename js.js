@@ -13,7 +13,7 @@ angular.module('app').controller('mainCtrl', function($scope){
 //creating a directive... give a name ..it returns an object..
 angular.module('app').directive('userInfoCard', function(){
 	return {   
-		template :"Name :{{user.name}} <br/><div ng-show='user.job'>job: {{user.job}} </div>  <div>Friends: <div ng-repeat='friend in user.friends'>{{friend}}</div></div>   ",
+		templateUrl :"userInfo.html",
 		restrict:"E"  
 	}
 })
@@ -27,3 +27,9 @@ angular.module('app').directive('userInfoCard', function(){
 
 
 //if I put the next div in the next line..code is getting broken--find out
+
+
+//difficult to do template here it self...so better to use external template..
+//change it to templateUrl for external linking of templates
+
+//awesome features of directives.........external templateUrl..
